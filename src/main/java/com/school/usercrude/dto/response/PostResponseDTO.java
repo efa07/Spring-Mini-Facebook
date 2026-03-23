@@ -1,15 +1,17 @@
-package com.school.usercrude.dto.request;
+package com.school.usercrude.dto.response;
 
-import jakarta.validation.constraints.NotBlank;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PostRequestDTO {
+public class PostResponseDTO {
     private Long id;
-    @NotBlank(message = "Title is required")
     private String title;
-    @NotBlank(message = "Content is required")
     private String content;
+    private List<String> tags;
 }
